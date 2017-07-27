@@ -1,0 +1,12 @@
+[
+    {"name": "time", "type": "TIMESTAMP"},
+    {"name": "container_id", "type": "STRING"},
+    {"name": "container_name", "type": "STRING"},
+    {"name": "source", "type": "STRING"},
+    {"name": "pool", "type": "STRING"},
+    {"name": "level", "type": "STRING"},
+    {"name": "message", "type": "STRING"},
+    {"name": "script", "type": "STRING"},
+    {"name": "line", "type": "STRING"},
+    {"name": "log", "type": "STRING"}
+]

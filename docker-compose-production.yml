@@ -1,0 +1,16 @@
+version: '3'
+
+services:
+
+  fluentd:
+    restart: always
+    hostname: fluentd
+    container_name: fluentd
+    image: crunchgeek/fluentd:latest
+    environment:
+      - GC_PROJECT=crunch-geek
+      - GC_DATASET=logs
+      - GC_TABLES=nginx
+    ports:
+      - "24224:24224"
+      - "24224:24224/udp"
