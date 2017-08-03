@@ -3,6 +3,20 @@ This container exposes default Fluentd forwarding port 24224 for log ingestion, 
 
 BigQuery can be set as datafeed for Google Data Studio to create Business Intelligence Logs Dashboard.
 
+## How to deploy
+1. Build Fluentd container
+2. Deploy container on VM authorized to stream to Google BigQuery
+3. Set up Nginx, PHP containers to forward logs to Fluentd
+
+docker-compose.yml example
+```
+    logging:
+      driver: "fluentd"
+      options:
+        fluentd-address: ip_address_of_fluentd:24224
+        tag: your_tag_name
+```
+
 ## Features
 Parsed Nginx access logs to support:
 - GeoIP map rendering
