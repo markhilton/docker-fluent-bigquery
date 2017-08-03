@@ -1,4 +1,4 @@
-# Docker Fluentd for Nginx & PHP logs stream to Google BigQuery
+# Docker Fluentd for Google BigQuery
 This container exposes default Fluentd forwarding port 24224 for log ingestion, to parse Nginx & PHP logs into Google BigQuery tables.
 
 BigQuery can be set as datafeed for Google Data Studio to create Business Intelligence Logs Dashboard.
