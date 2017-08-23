@@ -8,6 +8,7 @@ services:
     container_name: fluentd
     build: .
     volumes:
+      - ./plugins:/fluentd/plugins
       - ./fluent.conf:/fluentd/etc/fluent.conf
     environment:
       - GC_PROJECT=${GC_PROJECT}
