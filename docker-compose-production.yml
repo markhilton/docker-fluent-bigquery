@@ -7,17 +7,7 @@ services:
     hostname: fluentd
     container_name: fluentd
     image: crunchgeek/fluentd:latest
-    environment:
-      - GC_PROJECT=${GC_PROJECT}
-      - GC_DATASET=${GC_DATASET}
-      - GC_TABLE_NGINX=${GC_TABLE_NGINX}
-      - GC_TABLE_NGINX_ERRORS=${GC_TABLE_NGINX_ERRORS}
-      - GC_TABLE_PHP70=${GC_TABLE_PHP70}
-      - GC_TABLE_PHP56=${GC_TABLE_PHP56}
-      - GC_TABLE_PHP53=${GC_TABLE_PHP53}
-      - GC_TABLE_HAPROXY=${GC_TABLE_HAPROXY}
-      - GC_TABLE_NEWRELIC=${GC_TABLE_NEWRELIC}
-      - GC_TABLE_WATCHTOWER=${GC_TABLE_WATCHTOWER}
+    env_file: .env
     ports:
       - "24224:24224"
       - "24224:24224/udp"
